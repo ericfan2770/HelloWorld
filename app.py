@@ -1,14 +1,10 @@
-x = (10 + 3) * 2  # 16, 26
-print(x)
+# Python module: separate file with reusable code
+import math  # import math module
 
-# 0 parentheses
-# 1 exponentiation 2 ** 3
-# 2 multiplication / division
-# 3 addition / subtration
+x = 2.9
+print(round(x))  # 3
 
-x = 10 + 3 * 2 ** 2
-print(x)
+print(abs(-2.9))
 
-# Exercise
-x = (2 + 3) * 10 - 3  # 47
-print(x)
+print(math.ceil(2.9))
+print(math.floor(2.9))
