@@ -1,15 +1,11 @@
-# try block
-# try-except blocks are used to handle exceptions that are raised in our programs
-try:
-    age = int(input("Age: "))
-    income = 20000
-    risk = income / age
-    print(age)
-except ZeroDivisionError:
-    print("Age cannot be 0!")
-# if a ValueError occurs, then print
-except ValueError:
-    print("Invalid value!")
+# Comments can be used for reminders in our code, documentations, for others to understand our code, etc.
+# Don't use comments to explain what the code does
+# Use comments to explain whys and hows, use notes for yourself or other developers
 
-# exit code 0 means program terminated properly
-# exception crashes our program
+# print Sky is blue <-- verbose
+print("Ocean is blue")
+
+
+def square(number):
+    return number * number
+
