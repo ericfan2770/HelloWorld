@@ -1,12 +1,25 @@
-has_high_income = False
-has_good_credit = True
-has_criminal_record = True
+temperature = 30
 
-if has_high_income and has_good_credit:  # Logical AND operator
-    print("Eligible for loan (1)")
+if temperature != 30:
+    print("It's a hot day")
+else:
+    print("It's not a hot day")
 
-if has_high_income or has_good_credit:  # Logical OR operator
-    print("Eligible for loan (2)")
+# Exercise 1
+name = input("What is your name? ")
+if len(name) < 3:
+    print("name must be at least 3 characters")
+elif len(name) > 50:
+    print("name can be a maximum of 50 characters")
+else:
+    print("name looks good!")
 
-if has_good_credit and not has_criminal_record:  # Logical NOT operator
-    print("Eligible for loan (3)")
+# Exercise 2
+weight = int(input("Weight: "))
+weight_type = input("(L)bs or (K)g: ")
+if weight_type.upper() == "L":
+    converted = weight * 0.45
+    print(f"You are {converted} kilograms")
+else:
+    converted = weight / 0.45
+    print(f"You are {converted} pounds")
