@@ -1,34 +1,22 @@
-# We use classes to define new types to model real concepts
-
-# Use Pascal naming convention
-# No fields! Use attributes instead
-class Point:
-    def __init__(self, x , y):  # constructor: short for initialize, self is like "this" keyword in Java
-        self.x = x
-        self.y = y
-
-    def move(self):
-        print("move")
-
-    def draw(self):
-        print("draw")
+# Inheritance: mechanism to reuse code
+class Mammal:
+    def walk(self):
+        print("walk")
 
 
-point = Point(10, 20)
-point.x = 11
-print(point.x)
-
-# Exercise
-class Person:
-    def __init__(self, name):  # self should always be the very first parameter
-        self.name = name
-
-    def talk(self):
-        print(f"Hi! I am {self.name}!")
+class Dog(Mammal):  # Dog inherits from Mammal
+    # pass -- if Dog has no unique methods
+    def bark(self):
+        print("bark")
 
 
-person = Person("Eric")
-person.talk()
+class Cat(Mammal):
+    def be_annoying(self):
+        print("annoying")
 
-person = Person("Bob")
-person.talk()
+
+dog1 = Dog()
+dog1.bark()
+
+cat1 = Cat()
+cat1.be_annoying()
