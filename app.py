@@ -1,11 +1,9 @@
-message = input("> ")
-words = message.split(' ')
-emojis = {
-    ":)": "🙂",
-    ":(": "😞"
-}
-output = ""
-for word in words:
-    output += emojis.get(word, word) + " "
-output = output[:len(output) - 1]
-print(output)
+# function: container with a few lines of code for a specific purpose
+def greet_user():
+    print('Hi there!')
+    print('Welcome aboard')
+
+
+print("Start")
+greet_user()  # must be called after the function is defined
+print("Finish")
