@@ -1,22 +1,15 @@
-# Inheritance: mechanism to reuse code
-class Mammal:
-    def walk(self):
-        print("walk")
+# modules: files to break up our code into multiple files (each file is a module)
+# can import specific functions/methods as well
 
+import converters  # imports entire module
+from converters import kg_to_lbs  # imports specific function/class
+from utils import find_max
 
-class Dog(Mammal):  # Dog inherits from Mammal
-    # pass -- if Dog has no unique methods
-    def bark(self):
-        print("bark")
+print(converters.kg_to_lbs(70))  # need the "converters" prefix
 
+print(kg_to_lbs(100))
 
-class Cat(Mammal):
-    def be_annoying(self):
-        print("annoying")
-
-
-dog1 = Dog()
-dog1.bark()
-
-cat1 = Cat()
-cat1.be_annoying()
+# Exercise
+numbers = [1, 2, 3, 5, 7, 2, 4, 6, 4, 8]
+maximum = find_max(numbers)
+print(maximum)
