@@ -1,23 +1,12 @@
-is_hot = False
-is_cold = False
-
-# Python scope is determined by indentation!
-# And Python execution is entirely line based, not semicolon
-if is_hot:
-    print("It's a hot day")
-    print("Drink plenty of water")
-elif is_cold:
-    print("It's a cold day")
-    print("Wear warm clothes")
-else:
-    print("It's a lovely day")
-print("Enjoy your day")
-
-# Exercise
-price = 1000000
+has_high_income = False
 has_good_credit = True
-if has_good_credit:
-    down_payment = price * 0.1
-else:
-    down_payment = price * 0.2
-print(f"Down payment: ${down_payment}")
+has_criminal_record = True
+
+if has_high_income and has_good_credit:  # Logical AND operator
+    print("Eligible for loan (1)")
+
+if has_high_income or has_good_credit:  # Logical OR operator
+    print("Eligible for loan (2)")
+
+if has_good_credit and not has_criminal_record:  # Logical NOT operator
+    print("Eligible for loan (3)")
