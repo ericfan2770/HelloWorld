@@ -1,17 +1,29 @@
-# Package: like a folder, a folder for modules
+import random  # built-in module
 
-import ecommerce.shipping
-ecommerce.shipping.calc_shipping()  # can often be verbose
+for i in range(3):
+    #  print(random.random())
+    print(random.randint(10, 20))  # inclusive for start and end
 
-# import individual methods/functions
-from ecommerce.shipping import calc_shipping, calc_tax
-calc_shipping()
+print()
 
-# import entire module
-from ecommerce import shipping
-shipping.calc_shipping()
+members = ["John", "Mary", "Bob", "Mosh"]
+leader = random.choice(members)
+print(leader)
 
-# from usage:
-# from <package> import <module> OR
-# from <package.module> import <function/method>
+print()
+
+# Exercise
+
+
+class Dice:
+    def roll(self):
+        num_1 = random.randint(1, 6)
+        num_2 = random.randint(1, 6)
+        result = num_1, num_2  # automatically a tuple without line breaks
+        return result
+
+
+dice_1 = Dice()
+print(dice_1.roll())
+
 
