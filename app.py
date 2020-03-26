@@ -1,11 +1,19 @@
-# Comments can be used for reminders in our code, documentations, for others to understand our code, etc.
-# Don't use comments to explain what the code does
-# Use comments to explain whys and hows, use notes for yourself or other developers
+# We use classes to define new types to model real concepts
 
-# print Sky is blue <-- verbose
-print("Ocean is blue")
+# Use Pascal naming convention
+# No fields! Use attributes instead
+class Point:
+    def move(self):
+        print("move")
 
+    def draw(self):
+        print("draw")
 
-def square(number):
-    return number * number
+point1 = Point()
+point1.x = 10  # Attributes (like setting fields outside of constructor)
+point1.y = 20
+print(point1.x)
+point1.draw()
 
+point2 = Point()
+point2.x = 1
