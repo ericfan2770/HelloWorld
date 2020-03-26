@@ -1,17 +1,22 @@
-from pathlib import Path
+import openpyxl as xl  # alias for openpyxl package
+from openpyxl.chart import BarChart, Reference
 
-# Absolute path -- start from root of hard disk
-#   /usr/local/bin
-# Relative path
-#
 
-path = Path("emails")  # like Java File class
-print(path.exists())
-# print(path.mkdir())
-# print(path.rmdir())
+def process_workbook(filename):
+    wb = xl.load_workbook(filename)  # workbook object
+    sheet = wb['Sheet1']
+    # cell = sheet['a1']  or sheet.cell(1, 1)
 
-path = Path()
-# print(path.glob('*.py'))  # all py files in current directory
+    for row in range(2, sheet.max_row + 1):
+        cell = sheet.cell(row, 3)
+        corrected_price = cell.value * 0.9
+        corrected_price_cell = sheet.cell(row, 4)
+        corrected_price_cell.value = corrected_price
 
-for file in path.glob('*'):
-    print(file)
+    values = Reference(sheet, min_row=2, max_row=sheet.max_row, min_col=4, max_col=4)
+
+    chart = BarChart()
+    chart.add_data(values)
+    sheet.add_chart(chart, "e2")
+
+    wb.save(filename)
