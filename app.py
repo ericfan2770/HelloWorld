@@ -1,14 +1,15 @@
-def emoji_converter(message):
-    words = message.split(" ")
-    emojis = {
-        ":)": "🙂",
-        ":(": "😞"
-    }
-    output = ""
-    for word in words:
-        output += emojis.get(word, word) + " "
-    return output
+# try block
+# try-except blocks are used to handle exceptions that are raised in our programs
+try:
+    age = int(input("Age: "))
+    income = 20000
+    risk = income / age
+    print(age)
+except ZeroDivisionError:
+    print("Age cannot be 0!")
+# if a ValueError occurs, then print
+except ValueError:
+    print("Invalid value!")
 
-
-message = input("> ")
-print(emoji_converter(message))
+# exit code 0 means program terminated properly
+# exception crashes our program
