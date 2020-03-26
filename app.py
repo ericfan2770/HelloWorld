@@ -1,15 +1,17 @@
-# modules: files to break up our code into multiple files (each file is a module)
-# can import specific functions/methods as well
+# Package: like a folder, a folder for modules
 
-import converters  # imports entire module
-from converters import kg_to_lbs  # imports specific function/class
-from utils import find_max
+import ecommerce.shipping
+ecommerce.shipping.calc_shipping()  # can often be verbose
 
-print(converters.kg_to_lbs(70))  # need the "converters" prefix
+# import individual methods/functions
+from ecommerce.shipping import calc_shipping, calc_tax
+calc_shipping()
 
-print(kg_to_lbs(100))
+# import entire module
+from ecommerce import shipping
+shipping.calc_shipping()
 
-# Exercise
-numbers = [1, 2, 3, 5, 7, 2, 4, 6, 4, 8]
-maximum = find_max(numbers)
-print(maximum)
+# from usage:
+# from <package> import <module> OR
+# from <package.module> import <function/method>
+
