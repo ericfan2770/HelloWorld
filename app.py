@@ -1,14 +1,33 @@
-birth_year = input("Birth year: ") # return value is always a String
-print(type(birth_year))
-age = 2019 - int(birth_year) # converts birth_year from a String to an integer
-print(type(age))
-print(age)
+course = 'Python for Beginners'
+# print(course)
 
-weight_pounds = input("What is your weight in pounds? ")
-weight_kilograms = int(weight_pounds) / 2.205
-print(weight_kilograms)
+course = "Python's Course for Beginners"
+# print(course)
 
-# Conversions to other types
-# int()
-# float()
-# bool()
+course = 'Python for "Beginners"'
+# print(course)
+
+course = '''Python's Course for "Beginners"'''
+# print(course)
+
+course = '''
+Printing in multiple
+lines!
+'''
+
+course = "Python for Beginners"
+         #0123456789
+# This is like the Java charAt method
+print(course[0])    # Zero-indexed
+print(course[3])
+print(course[-2])   # second character from the end
+
+# This is like Java substring method
+print(course[0:3])  # Still [inclusive:exclusive]
+print(course[3:])   # Like substring(3)
+print(course[:5])   # From beginning to last index, exclusive
+print(course[:])    # Empty means 0 for left, len for right
+
+# Exercise
+name = 'Jennifer'
+print(name[1:-1])   # prints 'ennife'
