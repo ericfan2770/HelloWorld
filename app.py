@@ -1,20 +1,13 @@
-course = 'Python for Beginners'
-print(len(course))  # len is a general purpose function
+print(10 + 3)
+print(10 - 3)
+print(10 * 3)
+print(10 / 3)   # result is floating point
+print(10 // 3)  # result is integer
+print(10 % 3)   # modulus operator
+print(10 ** 3)  # Math.pow(10, 3)
 
-# Methods belong to a particular class (String methods, Array methods, etc), while
-# functions are general purpose (works for many types of objects)
+print()
 
-print(course.upper())
-print(course.lower())
-
-print(course.find('P'))  # find is like the Java indexOf method
-print(course.find('o'))
-print(course.find('O'))
-
-print(course.find('Beginners'))  # Returns index of first occurrence of the given String
-
-print(course.replace('Beginners', 'Absolute Beginners'))
-print(course.replace('P', 'J'))
-
-print('Python' in course)  # like indexOf('Python') != -1
-print('python' in course)
+x = 10
+x -= 3  # augmented assignment operator
+print(x)
