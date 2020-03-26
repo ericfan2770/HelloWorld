@@ -1,29 +1,17 @@
-import random  # built-in module
+from pathlib import Path
 
-for i in range(3):
-    #  print(random.random())
-    print(random.randint(10, 20))  # inclusive for start and end
+# Absolute path -- start from root of hard disk
+#   /usr/local/bin
+# Relative path
+#
 
-print()
+path = Path("emails")  # like Java File class
+print(path.exists())
+# print(path.mkdir())
+# print(path.rmdir())
 
-members = ["John", "Mary", "Bob", "Mosh"]
-leader = random.choice(members)
-print(leader)
+path = Path()
+# print(path.glob('*.py'))  # all py files in current directory
 
-print()
-
-# Exercise
-
-
-class Dice:
-    def roll(self):
-        num_1 = random.randint(1, 6)
-        num_2 = random.randint(1, 6)
-        result = num_1, num_2  # automatically a tuple without line breaks
-        return result
-
-
-dice_1 = Dice()
-print(dice_1.roll())
-
-
+for file in path.glob('*'):
+    print(file)
